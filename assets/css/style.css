@@ -4,8 +4,11 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: 'Helvetica';
 }
-
+html {
+    font-size: 100%;
+}
 a:visited {
     color: #FFF;
 }
@@ -20,7 +23,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    max-width: calc(100vw - 180px);
+    max-width: calc(100vw - 175px);
     margin: auto;
 }
 
@@ -29,7 +32,7 @@ header {
 }
 .nav-logo img{
 
-    min-width: 140px;
+    min-width: 100px;
     max-width: 100%;
 }
 .menu {
@@ -75,11 +78,8 @@ nav ul li a:hover{
     display: none;
 }
 /**************************** MENU ****************************/
-.container {
-    height: calc(100vh - 100px);
-}
+
 .premium-banner{
-    
     background-color: #993399;
     color: #FFF;
 }
@@ -88,37 +88,37 @@ nav ul li a:hover{
     text-decoration: underline;
 }
 .container {
+    height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 85px;
-    gap: 40px;
+    gap: 30px;
 }
 
-
-
-.left-container {
+.selling-container {
     flex: 1;
-    gap: 10px;
+    min-width: 400px;
 }
 
 .section-name {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1rem;
     letter-spacing: 2px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
+
 .section-main-advertising {
-    font-size: 94px;
+    font-size: 56px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .section-second-advertising {
     letter-spacing: 1px;
-    font-size: 34px;
+    font-size: 18px;
     line-height: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .container .button{
@@ -137,14 +137,20 @@ nav ul li a:hover{
 .term {
     max-width: 775px;
     margin-top: 50px;
+    font-size: 12px;
     line-height: 20px;
 }
 
-.right-container {
-    max-width: 450px;
+.img-container {
+    min-width: 228px;
+    max-width: 350px;
 }
 
-.right-container img{
+.img-box {
+    max-width: 100%;
+}
+
+.img-container img{
     max-width: 100%;
 }
 
@@ -165,7 +171,7 @@ nav ul li a:hover{
     color: #2941AB;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
     .container {
         height: auto;
         flex-direction: column;
@@ -174,7 +180,7 @@ nav ul li a:hover{
         padding: 60px;
         text-align: center;
     }
-    .left-container {
+    .selling-container {
         flex: 1;
     }
     .section-name,
@@ -192,10 +198,10 @@ nav ul li a:hover{
         font-weight: bold;
     }
 
-    .right-container {
+    .img-container {
         max-width: 300px;
     }
-    .right-container img{
+    .img-container img{
         max-width: 100%;
     }
 
@@ -203,10 +209,6 @@ nav ul li a:hover{
         height: 100%;
         overflow: hidden;
     }
-}
-
-@media (max-width: 1023px) {
-
     #btn-mobile {
         display: block;
     }
@@ -253,7 +255,6 @@ nav ul li a:hover{
 
     #hamburguer {
         display: block;
-        /* width: 20px; */
         border-top: 2px solid;
     }
 
@@ -275,9 +276,13 @@ nav ul li a:hover{
     }
     #nav.active #hamburguer::after {
         transform: rotate(-135deg);
-        
         top: -7px;
-        /* border-top-color: transparent; */
+    }
+    .selling-container {
+        min-width: 100%;
+    }
+    .term {
+        width: 100%;
     }
 }
 
